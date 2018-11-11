@@ -17,7 +17,7 @@ public class TicTacToe {
 			// show player1 board
             printArr(board);
             while (wins != 1) {
-            	// PLAYER1's TURN
+            	// PLAYER1's TURN ---
             	// check if board is full
             	int empty = 0;
             	for (int row = 0; row < board.length; row++) {
@@ -27,12 +27,12 @@ public class TicTacToe {
     					}
     				}
     			}
-            	// break while loop to end game if board full
+            	// break if board full
             	if (empty == 0) {
             		System.out.println("The board is full. Neither player won.");
             		break;
             	}
-            	// player1 input
+            	// player1's input
             	Scanner p1 = new Scanner(System.in);
             	System.out.println("Player 1, enter the row and column of the space you want to move to. ");
             	int p1row = p1.nextInt() - 1;
@@ -50,7 +50,7 @@ public class TicTacToe {
                 	p1row = p1.nextInt() - 1;
                 	p1col = p1.nextInt() - 1;
             	}
-            	// put 1 into space
+            	// put 1 into chosen empty space
             	board[p1row][p1col] = 1;
             	// show board after player 1's turn
             	printArr(board);
@@ -86,7 +86,7 @@ public class TicTacToe {
             		break;
             	}
             	
-            	// PLAYER 2's TURN
+            	// PLAYER 2's TURN ---
             	System.out.println("Player 2, enter the row and column of the space you want to move to. ");
             	int p2row = p1.nextInt() - 1;
             	int p2col = p1.nextInt() - 1;
@@ -123,10 +123,13 @@ public class TicTacToe {
             		continue;
             	}
             }
-            // 1000 iterations of the game, within 3 modes. After the thousand games in each mode, display the number of times X won, O won and ties - 3 modes
+	      
+            // 1000 iterations of the game, within 3 modes. 
+	    // After the thousand games in each mode, display the number of times X won, O won and ties
             
-            // for MODE 1
-            // X and O move **randomly as described above. If a random square chosen has been played, have the player choose again
+            // MODE 1
+            // X and O move **randomly as described above. 
+	    // If a random square chosen has been played, have the player choose again
             System.out.println("Beginning Mode 1...");
     		// create counter for iterations
     		int counter1 = 0;
